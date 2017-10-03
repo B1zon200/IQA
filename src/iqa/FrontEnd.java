@@ -11,13 +11,13 @@ package iqa;
  */
 public class FrontEnd extends javax.swing.JFrame {
     
-    private Calculos c = new Calculos();
+    private Calculos c;
     /**
      * Creates new form FrontEnd
      */
     public FrontEnd() {
         initComponents();
-        
+        c = new Calculos();
     }
 
     /**
@@ -141,7 +141,7 @@ public class FrontEnd extends javax.swing.JFrame {
 
         jLabel11.setText("Altitude");
 
-        jLabel12.setText("Se ouver alteração na temperatura inserir na caixa a frente:");
+        jLabel12.setText("Se ouver variação na temperatura inserir na caixa a frente:");
 
         resultadoF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,49 +214,50 @@ public class FrontEnd extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(resultadoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(solidoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(turbidezF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(coliformeF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dboF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nitrogenioF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fosforoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(phF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(temperaturaF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(oxigenioF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(altitudeF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(calculaIQA)
-                        .addComponent(resultadoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel12)
-                        .addComponent(variacaoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(solidoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(turbidezF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel6))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(coliformeF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dboF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nitrogenioF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fosforoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(phF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(temperaturaF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel11))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(oxigenioF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(altitudeF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(calculaIQA)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel12)
+                                .addComponent(variacaoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(271, Short.MAX_VALUE))
         );
 
@@ -302,26 +303,53 @@ public class FrontEnd extends javax.swing.JFrame {
     private void calculaIQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculaIQAActionPerformed
 
         try{
-           c.Solidos(Double.parseDouble(solidoF.getText()));  
+           c.Solidos(Double.parseDouble(solidoF.getText())); 
+           System.out.println("O resultado do getSolidos foi: " + c.getSolidos());
+           
            c.Turbidez(Double.parseDouble(turbidezF.getText())); 
+           System.out.println("O resultado do getTurbidez foi: " + c.getTurbidez());
+           
            c.Coliformes(Double.parseDouble(coliformeF.getText()));
+           System.out.println("O resultado do getColiformes foi: " + c.getColiformes());
+           
            c.DBO(Double.parseDouble(dboF.getText())); 
+           System.out.println("O resultado do getDBO foi: " + c.getDbo());
+           
            c.Nitrato(Double.parseDouble(nitrogenioF.getText()));
+           System.out.println("O resultado do getNitratro foi: " + c.getNitrato());
+           
            c.Fosfato(Double.parseDouble(fosforoF.getText()));
+           System.out.println("O resultado do getFosfato foi: " + c.getFosfato());
+           
            c.Ph(Double.parseDouble(phF.getText()));
-           c.setVariacao(Double.parseDouble(variacaoF.getText()));
-           c.Oxigenio(Double.parseDouble(oxigenioF.getText()),
-                      Double.parseDouble(temperaturaF.getText()),
-                      Double.parseDouble(altitudeF.getText()));  
+           System.out.println("O resultado do getPh foi: " + c.getPh());
+           
+           c.Variacao(Double.parseDouble(variacaoF.getText()));
+           System.out.println("O resultado do getVariacao foi: " + c.getVariacao());
+           
            c.setAltitude(Double.parseDouble(altitudeF.getText())); 
+           System.out.println("O resultado do getAltitude foi: " + c.getAltitude());
+           
+           c.setTemperatura(Double.parseDouble(temperaturaF.getText()));
+           System.out.println("O resultado do getTemperatura foi: " + c.getTemperatura());
+           
+           c.Oxigenio(Double.parseDouble(oxigenioF.getText())); 
+           System.out.println("O resultado do getOxigenio foi: " + c.getOxigenio());
+           
            c.IQA();
+           System.out.println("O resultado do IQA foi: " + c.getIqa());
+           
         }catch(NumberFormatException e){
             e.printStackTrace();
         }
     }//GEN-LAST:event_calculaIQAActionPerformed
 
     private void resultadoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadoFActionPerformed
-            resultadoF.setText(String.valueOf(c.getIqa()));
+        try{
+            resultadoF.setText(Double.toString(c.getIqa()));
+        }catch(NumberFormatException e){
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_resultadoFActionPerformed
 
     /**
@@ -355,10 +383,9 @@ public class FrontEnd extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new FrontEnd().setVisible(true);
+                
             }
-        });
-        
-        
+        });   
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

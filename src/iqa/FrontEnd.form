@@ -105,60 +105,62 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="resultadoF" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="solidoF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="turbidezF" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="coliformeF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dboF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="nitrogenioF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fosforoF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="phF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="temperaturaF" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="oxigenioF" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="altitudeF" alignment="3" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="solidoF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="turbidezF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="calculaIQA" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="variacaoF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="coliformeF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="dboF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="nitrogenioF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fosforoF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="phF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="temperaturaF" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="oxigenioF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="altitudeF" alignment="3" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="calculaIQA" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="resultadoF" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="variacaoF" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="271" max="32767" attributes="0"/>
@@ -281,7 +283,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Se ouver altera&#xe7;&#xe3;o na temperatura inserir na caixa a frente:"/>
+        <Property name="text" type="java.lang.String" value="Se ouver varia&#xe7;&#xe3;o na temperatura inserir na caixa a frente:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="resultadoF">

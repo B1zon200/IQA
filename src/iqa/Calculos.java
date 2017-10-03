@@ -24,7 +24,13 @@ public class Calculos {
     private double oxigenio;
     private double altitude;
     private double iqa;
+    private double temperatura;
 
+    public void setTemperatura(double temperatura) {
+        this.temperatura = temperatura;
+    }
+
+    
     public void setIqa(double iqa) {
         this.iqa = iqa;
     }
@@ -69,6 +75,11 @@ public class Calculos {
         this.oxigenio = oxigenio;
     }
 
+    public double getTemperatura() {
+        return temperatura;
+    }
+    
+    
     public double getIqa() {
         return iqa;
     }
@@ -118,7 +129,7 @@ public class Calculos {
             setSolidos(79.75 + (0.166 * solidos)
                     - (0.001088 * (Math.pow(solidos, 2))));
         }
-        if (solidos > 150 && solidos <= 500) {
+         else if (solidos > 150 && solidos <= 500) {
             setSolidos(101.67 - (0.13917 * solidos));
         } else if (solidos > 500) {
             setSolidos(32);
@@ -226,24 +237,24 @@ public class Calculos {
         }
     }
 
-    public double Variacao(double variacao) {
+    public void Variacao(double variacao) {
         if ((variacao > -0.625) && (variacao < 0.625)) {
-            return (4.8 * variacao + 94);
+            setVariacao(4.8 * variacao + 94);
         } else {
-            return 0;
+            setVariacao(0);
         }
     }
 
-    public void Oxigenio(double oxigenio, double temperatura, double altitude) {
-        double saturacao = (14.62 - (0.3898 * temperatura) + (0.006969
-                * Math.pow(temperatura, 2) - (0.00005896
-                * Math.pow(temperatura, 3)))
-                * Math.pow((1 - 0.0000228675 * altitude), 5.167));
+    public void Oxigenio(double oxigenio) {
+      
+        double saturacao = (14.62-(0.3898*getTemperatura())+
+                           (0.006969*Math.pow(getTemperatura(),2)-
+                           (0.00005896*Math.pow(getTemperatura(),3)))*
+                           (Math.pow((1-0.0000228675*getAltitude()),5.167)));
         double porcentagem = 100 * (oxigenio / saturacao);
-
+        System.out.println("Saturação: " + saturacao + " porcentagem: " + porcentagem);
         if (porcentagem <= 50) {
-            setOxigenio(((0.34 * porcentagem) + (0.008095
-                    * Math.pow(porcentagem, 2))
+            setOxigenio(((0.34 * porcentagem) + (0.008095 * Math.pow(porcentagem, 2))
                     + (1.35252 * 0.00001 * Math.pow(porcentagem, 3))) + 3);
         } else if (porcentagem > 50 && porcentagem <= 85) {
             setOxigenio(((-1.166 * porcentagem) + (0.058 * Math.pow(porcentagem, 2))
@@ -262,7 +273,7 @@ public class Calculos {
 
     public void IQA() {
         
-        double iqa = 0, p_solidos = 0.08, p_turbidez = 0.08,
+        double iqa = 0.0, p_solidos = 0.08, p_turbidez = 0.08,
                 p_coliformes = 0.15, p_dbo = 0.1, p_nitrogenio = 0.1,
                 p_fosforo = 0.1, p_ph = 0.12, p_variacao = 0.1,
                 p_oxigenio = 0.17;
@@ -274,15 +285,8 @@ public class Calculos {
                 * Math.pow(getNitrato(), p_nitrogenio)
                 * Math.pow(getFosfato(), p_fosforo) 
                 * Math.pow(getPh(), p_ph)
-                * Math.pow(Variacao(variacao), p_variacao)
+                * Math.pow(getVariacao(), p_variacao)
                 * Math.pow(getOxigenio(), p_oxigenio));
         setIqa(iqa);
     }
- /*   
-    public double Input(double input) {
-        Scanner reader = new Scanner(System.in); 
-        System.out.println("Enter a number: ");
-        return input = reader.nextDouble(); 
-    }
-*/
 }
