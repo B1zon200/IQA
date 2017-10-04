@@ -5,19 +5,25 @@
  */
 package iqa;
 
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
 /**
- *
- * @author b1zon
+ * Implementação do front end do artefato
+ * @author André A Kaviatkovski - Gabriel R Garcia
  */
 public class FrontEnd extends javax.swing.JFrame {
     
     private Calculos c;
+    private DecimalFormat decimal;
+    
     /**
      * Creates new form FrontEnd
      */
     public FrontEnd() {
         initComponents();
         c = new Calculos();
+        decimal = new DecimalFormat("0.0000");
     }
 
     /**
@@ -58,60 +64,6 @@ public class FrontEnd extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
 
-        solidoF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                solidoFActionPerformed(evt);
-            }
-        });
-
-        turbidezF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                turbidezFActionPerformed(evt);
-            }
-        });
-
-        coliformeF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                coliformeFActionPerformed(evt);
-            }
-        });
-
-        dboF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dboFActionPerformed(evt);
-            }
-        });
-
-        nitrogenioF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nitrogenioFActionPerformed(evt);
-            }
-        });
-
-        fosforoF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fosforoFActionPerformed(evt);
-            }
-        });
-
-        phF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                phFActionPerformed(evt);
-            }
-        });
-
-        temperaturaF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                temperaturaFActionPerformed(evt);
-            }
-        });
-
-        variacaoF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                variacaoFActionPerformed(evt);
-            }
-        });
-
         calculaIQA.setText("Resultado");
         calculaIQA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,13 +93,7 @@ public class FrontEnd extends javax.swing.JFrame {
 
         jLabel11.setText("Altitude");
 
-        jLabel12.setText("Se ouver variação na temperatura inserir na caixa a frente:");
-
-        resultadoF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resultadoFActionPerformed(evt);
-            }
-        });
+        jLabel12.setText("Se não ouver variação na temperatura inserir o valor \"0\" na caixa a frente:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -174,11 +120,11 @@ public class FrontEnd extends javax.swing.JFrame {
                         .addComponent(resultadoF)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(dboF, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(dboF, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
                             .addComponent(nitrogenioF, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -198,7 +144,7 @@ public class FrontEnd extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(oxigenioF, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel10)))
-                    .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel11)
@@ -215,7 +161,9 @@ public class FrontEnd extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(resultadoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(resultadoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel12))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
@@ -255,50 +203,12 @@ public class FrontEnd extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(calculaIQA)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel12)
-                                .addComponent(variacaoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(variacaoF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(271, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void coliformeFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coliformeFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_coliformeFActionPerformed
-
-    private void turbidezFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turbidezFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_turbidezFActionPerformed
-
-    private void dboFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dboFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dboFActionPerformed
-
-    private void nitrogenioFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nitrogenioFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nitrogenioFActionPerformed
-
-    private void fosforoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fosforoFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fosforoFActionPerformed
-
-    private void phFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_phFActionPerformed
-
-    private void temperaturaFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_temperaturaFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_temperaturaFActionPerformed
-
-    private void variacaoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_variacaoFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_variacaoFActionPerformed
-
-    private void solidoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_solidoFActionPerformed
-           
-    }//GEN-LAST:event_solidoFActionPerformed
 
     private void calculaIQAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculaIQAActionPerformed
 
@@ -337,20 +247,17 @@ public class FrontEnd extends javax.swing.JFrame {
            System.out.println("O resultado do getOxigenio foi: " + c.getOxigenio());
            
            c.IQA();
-           System.out.println("O resultado do IQA foi: " + c.getIqa());
+           System.out.println("O resultado do IQA foi: " + decimal.format(c.getIqa()));
+                        
+           resultadoF.setText(decimal.format(c.getIqa()));
+           resultadoF.setEditable(false);
+                   
            
         }catch(NumberFormatException e){
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Por favor, inserir apenas números", 
+                    "Invalido",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_calculaIQAActionPerformed
-
-    private void resultadoFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadoFActionPerformed
-        try{
-            resultadoF.setText(Double.toString(c.getIqa()));
-        }catch(NumberFormatException e){
-            e.printStackTrace();
-        }
-    }//GEN-LAST:event_resultadoFActionPerformed
 
     /**
      * @param args the command line arguments

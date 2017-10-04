@@ -53,12 +53,12 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                  <Component id="dboF" min="-2" pref="59" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <Component id="dboF" min="-2" pref="59" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <Component id="nitrogenioF" min="-2" pref="59" max="-2" attributes="0"/>
@@ -84,7 +84,7 @@
                           <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jLabel12" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -106,7 +106,10 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="resultadoF" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="resultadoF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -156,10 +159,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="calculaIQA" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="variacaoF" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="variacaoF" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -170,53 +170,26 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="solidoF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="solidoFActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="turbidezF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="turbidezFActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="coliformeF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="coliformeFActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="dboF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dboFActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="nitrogenioF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nitrogenioFActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="fosforoF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fosforoFActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="phF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="phFActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="temperaturaF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="temperaturaFActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="oxigenioF">
     </Component>
     <Component class="javax.swing.JTextField" name="altitudeF">
     </Component>
     <Component class="javax.swing.JTextField" name="variacaoF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="variacaoFActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="calculaIQA">
       <Properties>
@@ -283,13 +256,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Se ouver varia&#xe7;&#xe3;o na temperatura inserir na caixa a frente:"/>
+        <Property name="text" type="java.lang.String" value="Se n&#xe3;o ouver varia&#xe7;&#xe3;o na temperatura inserir o valor &quot;0&quot; na caixa a frente:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="resultadoF">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resultadoFActionPerformed"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>
